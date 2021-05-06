@@ -1,15 +1,128 @@
 <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>White Headphones</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <style media="screen">
+
+    body{
+      font-family: 'Raleway', sans-serif;
+      background: url("headphones.jpg");
+      background-size: cover;
+      text-transform: uppercase;
+    }
+
+    span{
+      display: block;
+      position: absolute;
+      font-size: 160px;
+    }
+    .this{
+      top:15%;
+      left: 10%;
+      animation: fadeInUp 1s ease 1.2s;
+      animation-fill-mode: backwards;
+    }
+
+    .is{
+      top: 15%;
+      right: 17%;
+      animation: fadeInUp 1s ease 2s;
+      animation-fill-mode: backwards;
+    }
+    .dripset{
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%);
+      animation: fadeInUpCentered 3s ease 3s;
+      animation-fill-mode: backwards;
+    }
+
+    .subscribe{
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%);
+
+    }
+    input{
+      text-transform: uppercase;
+      font-family: 'Raleway', sans-serif;
+      text-align: center;
+      padding: 12px 36px;
+      border-radius: 10px;
+      letter-spacing: 2px;
+      border: 1px solid rgba(0,0,0,0.4);
+      outline: none;
+    }
+    .shadow{
+      background: rgba(0,0,0,0.9);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      animation: fadeOut 2s ease;
+    }
+    @keyframes fadeOut {
+      0%{
+        opacity: 1;
+      }
+      100%{
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeInUp {
+      0%{
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      100%{
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeInUpCentered {
+      0%{
+        opacity: 0;
+        transform: translate(-50%, 10px);
+      }
+      100%{
+        opacity: 1;
+        transform: translate(-50%, 0);
+      }
+    }
+
+    .btn{
+      background: rgba(0,0,0,0);
+      animation: fadeInUp 1s ease 4.2s;
+      animation-fill-mode: backwards;
+    }
+    .box{
+      padding: 12px 48px;
+      animation: fadeInUp 1s ease 4s;
+      animation-fill-mode: backwards;
+    }
 
 
-<html>
+    </style>
+    <div class="shadow">
 
-<body>
+    </div>
+    <span class="this">This</span>
+    <span class="is">Is</span>
+    <span class="dripset">Dripset</span>
+    <div class="subscribe">
+      <input class="box" type="text" name="" placeholder="email">
+      <input class="btn" type="submit" value="Sign Up to get yours">
+    </div>
 
+    <!--  <img src="headphones.jpg" alt="">-->
 
-<h1> Hello world!! This is my fresh new website</h1>
-
-<p> blah blah blah</p>
-
-</body>
-
+  </body>
 </html>
