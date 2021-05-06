@@ -1,0 +1,29 @@
+.profile{
+  clip-path: circle(38% at 50% 50%);
+}
+
+
+body{
+  font-family: 'Playfair Display', serif;
+}
+
+
+.socials{
+  color: #3279a8;
+}
+
+.myfooter, .socials_bottom{
+  color:#a7a5a8;
+}
+
+
+.masthead {
+  height: 100vh;
+  min-height: 500px;
+  /* background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080'); */
+  background-image: url('profile.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}

@@ -1,128 +1,196 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>White Headphones</title>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <style media="screen">
+<html>
 
-    body{
-      font-family: 'Raleway', sans-serif;
-      background: url("headphones.jpg");
-      background-size: cover;
-      text-transform: uppercase;
-    }
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main_blank.css">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
 
-    span{
-      display: block;
-      position: absolute;
-      font-size: 160px;
-    }
-    .this{
-      top:15%;
-      left: 10%;
-      animation: fadeInUp 1s ease 1.2s;
-      animation-fill-mode: backwards;
-    }
+  <title>Dan's Portfolio!</title>
+</head>
 
-    .is{
-      top: 15%;
-      right: 17%;
-      animation: fadeInUp 1s ease 2s;
-      animation-fill-mode: backwards;
-    }
-    .dripset{
-      top: 45%;
-      left: 50%;
-      transform: translate(-50%);
-      animation: fadeInUpCentered 3s ease 3s;
-      animation-fill-mode: backwards;
-    }
-
-    .subscribe{
-      position: absolute;
-      top: 80%;
-      left: 50%;
-      transform: translate(-50%);
-
-    }
-    input{
-      text-transform: uppercase;
-      font-family: 'Raleway', sans-serif;
-      text-align: center;
-      padding: 12px 36px;
-      border-radius: 10px;
-      letter-spacing: 2px;
-      border: 1px solid rgba(0,0,0,0.4);
-      outline: none;
-    }
-    .shadow{
-      background: rgba(0,0,0,0.9);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      animation: fadeOut 2s ease;
-    }
-    @keyframes fadeOut {
-      0%{
-        opacity: 1;
-      }
-      100%{
-        opacity: 0;
-      }
-    }
-
-    @keyframes fadeInUp {
-      0%{
-        opacity: 0;
-        transform: translateY(10px);
-      }
-      100%{
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    @keyframes fadeInUpCentered {
-      0%{
-        opacity: 0;
-        transform: translate(-50%, 10px);
-      }
-      100%{
-        opacity: 1;
-        transform: translate(-50%, 0);
-      }
-    }
-
-    .btn{
-      background: rgba(0,0,0,0);
-      animation: fadeInUp 1s ease 4.2s;
-      animation-fill-mode: backwards;
-    }
-    .box{
-      padding: 12px 48px;
-      animation: fadeInUp 1s ease 4s;
-      animation-fill-mode: backwards;
-    }
+<body>
 
 
-    </style>
-    <div class="shadow">
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand ml-2" href="#">Handsome Dan</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Portfolio
+            </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Artwork</a>
+            <a class="dropdown-item" href="#">Robotics</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Everything</a>
+          </div>
+        </li>
+
+      </ul>
+      <a href="assets/resume.pdf" class="btn btn-outline-info" target="_blank">Resume</a>
+    </div>
+  </nav>
+
+  <br>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-12 col-lg-4 order-lg-1 order-3">
+        <img onclick="play()" src="images/profile.jpg" class="img-fluid profile" alt="">
+        <audio id="audio" src="assets/woof.wav" ></audio>
+      </div>
+      <div class="col-12 col-lg-8 order-2">
+        <h1>Walter "Handsome Dan" XVIII</h1>
+        <h3>The happiest and most handsome engineer bulldog ever.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod nulla mauris, vel commodo nisl volutpat quis. Nunc justo metus, ullamcorper a nisl rhoncus, convallis viverra lorem. Fusce semper lobortis velit condimentum auctor. In sollicitudin
+          velit quis commodo rhoncus. Cras auctor, urna quis blandit iaculis, mi tortor faucibus sapien, vitae maximus eros enim aliquam sapien.</p>
+        <a class="socials" href="https://facebook.com" target="_blank"><i data-feather="facebook"></i></a>
+        <a class="socials" href="https://facebook.com" target="_blank"><i data-feather="linkedin"></i></a>
+        <a class="socials" href="https://facebook.com" target="_blank"><i data-feather="twitter"></i></a>
+        <a class="socials" href="https://facebook.com" target="_blank"><i data-feather="instagram"></i></a>
+        <a class="socials" href="https://facebook.com" target="_blank"><i data-feather="github"></i></a>
+        <a class="socials" href="https://facebook.com" target="_blank"><i data-feather="mail"></i></a>
+      </div>
 
     </div>
-    <span class="this">This</span>
-    <span class="is">Is</span>
-    <span class="dripset">Dripset</span>
-    <div class="subscribe">
-      <input class="box" type="text" name="" placeholder="email">
-      <input class="btn" type="submit" value="Sign Up to get yours">
+    <hr>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-4">
+        <h1>Project Spotlight</h1>
+        <h3>A project Dan worked super hard on recently.</h3>
+        <p>More information about the project that makes you think, Wow! I really want to learn mo re about this person's project. So I'm gonna click the button below or reach out to them! Heck, I'll hire them! I'll hire them right now...</p>
+        <br>
+        <a href="https://seas.yale.edu/" target="_blank" class="btn btn-outline-info btn-lg">Learn More About This Project</a>
+        <hr>
+      </div>
+      <div class="col-12 col-lg-8">
+
+        <img src="images/project.jpg" class="img-fluid" alt="">
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container">
+    <h2>Dan's Other Cool Projects</h2>
+    <br>
+    <div class="row">
+      <div class="col mb-4">
+        <div class="card mx-auto" style="width: 18rem;">
+          <img src="images/proj1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">A Bulldog History</h5>
+            <p class="card-text">Dan wrote an op-ed in the YDN about the legacy of his ancestors and those whole held the title before him.</p>
+            <a href="#" class="btn btn-outline-info">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card mx-auto" style="width: 18rem;">
+          <img src="images/proj2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">A Robodog Butler</h5>
+            <p class="card-text">Every Handsome Dan needs some help around the studio. Dan built a robo dog to help out with tasks and tools.</p>
+            <a href="#" class="btn btn-outline-info">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card mx-auto" style="width: 18rem;">
+          <img src="images/proj3.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Puppy Vision with Alexa</h5>
+            <p class="card-text">Sponsored by amazon: See into the future with these waterproof, Alexa activated super high tech glasses. Woof woof.</p>
+            <a href="#" class="btn btn-outline-info">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col mb-4">
+        <div class="card mx-auto" style="width: 18rem;">
+          <img src="images/proj1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">A Bulldog History</h5>
+            <p class="card-text">Dan wrote an op-ed in the YDN about the legacy of his ancestors and those whole held the title before him.</p>
+            <a href="#" class="btn btn-outline-info">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card mx-auto" style="width: 18rem;">
+          <img src="images/proj2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">A Robodog Butler</h5>
+            <p class="card-text">Every Handsome Dan needs some help around the studio. Dan built a robo dog to help out with tasks and tools.</p>
+            <a href="#" class="btn btn-outline-info">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card mx-auto" style="width: 18rem;">
+          <img src="images/proj3.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Puppy Vision with Alexa</h5>
+            <p class="card-text">Sponsored by amazon: See into the future with these waterproof, Alexa activated super high tech glasses. Woof woof.</p>
+            <a href="#" class="btn btn-outline-info">Learn More</a>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-<img src="headphones.jpg" alt="">
 
-  </body>
+  </div>
+
+  <nav class="navbar navbar-dark bg-dark myfooter">
+    <div class="container">
+
+        <div class="col-12 col-md-4">
+          <h4>Handsome Dan</h4>
+          <p>&copy; 2020</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <a class="socials_bottom" href="https://facebook.com" target="_blank"><i data-feather="facebook"></i></a>
+          <a class="socials_bottom" href="https://facebook.com" target="_blank"><i data-feather="linkedin"></i></a>
+          <a class="socials_bottom" href="https://facebook.com" target="_blank"><i data-feather="twitter"></i></a>
+          <a class="socials_bottom" href="https://facebook.com" target="_blank"><i data-feather="instagram"></i></a>
+          <a class="socials_bottom" href="https://facebook.com" target="_blank"><i data-feather="github"></i></a>
+          <a class="socials_bottom" href="https://facebook.com" target="_blank"><i data-feather="mail"></i></a>
+
+        </div>
+        <div class="col-12 col-md-4">
+          <br>
+          <h5>Catch me on the Football field or in the CEID</h5>
+        </div>
+
+      </div>
+  </nav>
+<script src="js/main.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    feather.replace()
+  </script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
 </html>
